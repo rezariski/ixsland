@@ -1,0 +1,13 @@
+[Unit]
+Description=ixsland Dynamic Island (Linux Native Port)
+After=graphical-session.target
+PartOf=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=/home/reza/.local/share/ixsland/ixsland.py
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=graphical-session.target

@@ -1,0 +1,21 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Cache and local runtime
+*.log
+/tmp/
+config.json
+
+# Audio and large promo video renders (use Releases for full MP4)
+*.m4a
+*.oga
+*.mp3
+*.mp4
+!assets/demo_preview.gif
+
+# System & IDE
+.DS_Store
+.vscode/
+.idea/
