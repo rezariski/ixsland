@@ -12,6 +12,9 @@
 <br/>
 
 <p align="center">
+  <a href="https://github.com/rezariski/ixsland/releases/latest">
+    <img src="https://img.shields.io/github/v/release/rezariski/ixsland?style=for-the-badge&color=FFD700&labelColor=0E1017&label=Release" alt="Latest Release" />
+  </a>
   <img src="https://img.shields.io/badge/Platform-Linux%20Wayland%20%7C%20X11-00E5FF?style=for-the-badge&logo=linux&logoColor=white&labelColor=0E1017" />
   <img src="https://img.shields.io/badge/Desktop-KDE%20Plasma%206-1D99F3?style=for-the-badge&logo=kde&logoColor=white&labelColor=0E1017" />
   <img src="https://img.shields.io/badge/Engine-PyQt6%20%7C%20Python%203-3776AB?style=for-the-badge&logo=python&logoColor=white&labelColor=0E1017" />
@@ -20,6 +23,7 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/rezariski/ixsland/releases/latest"><code>[ 📦 DOWNLOAD v1.0.0 ]</code></a> &nbsp;•&nbsp;
   <a href="#-quick-start"><code>[ ⚡ QUICK START ]</code></a> &nbsp;•&nbsp;
   <a href="#-feature-walkthrough"><code>[ ✨ FEATURES ]</code></a> &nbsp;•&nbsp;
   <a href="#-configuration"><code>[ ⚙️ CONFIG ]</code></a> &nbsp;•&nbsp;
