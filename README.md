@@ -1,9 +1,9 @@
 <div align="center">
 
-# 🏝️ ixsland — Dynamic Island for Linux
+# 🏝️ ixsland — Dynamic Island (Linux/Windows)
 
-**A blazing-fast, buttery-smooth Dynamic Island crafted natively for Linux desktop.**  
-*Zero Wine. Zero Electron bloat. Pure 60 FPS PyQt6 & Wayland native magic.*
+**A blazing-fast, buttery-smooth Dynamic Island crafted natively for Linux and Windows 10/11 (64-bit).**  
+*Zero Electron bloat. Pure 60 FPS PyQt6 native magic.*
 
 <br/>
 
@@ -15,19 +15,19 @@
   <a href="https://github.com/rezariski/ixsland/releases/latest">
     <img src="https://img.shields.io/github/v/release/rezariski/ixsland?style=for-the-badge&color=FFD700&labelColor=0E1017&label=Release" alt="Latest Release" />
   </a>
-  <img src="https://img.shields.io/badge/Platform-Linux%20Wayland%20%7C%20X11-00E5FF?style=for-the-badge&logo=linux&logoColor=white&labelColor=0E1017" />
-  <img src="https://img.shields.io/badge/Desktop-KDE%20Plasma%206-1D99F3?style=for-the-badge&logo=kde&logoColor=white&labelColor=0E1017" />
+  <img src="https://img.shields.io/badge/Linux-Wayland%20%7C%20X11-00E5FF?style=for-the-badge&logo=linux&logoColor=white&labelColor=0E1017" />
+  <img src="https://img.shields.io/badge/Windows-10%20%7C%2011%20(64--bit)-0078D4?style=for-the-badge&logo=windows&logoColor=white&labelColor=0E1017" />
   <img src="https://img.shields.io/badge/Engine-PyQt6%20%7C%20Python%203-3776AB?style=for-the-badge&logo=python&logoColor=white&labelColor=0E1017" />
-  <img src="https://img.shields.io/badge/Audio-PipeWire%20wpctl-FF6B6B?style=for-the-badge&logo=speaker&logoColor=white&labelColor=0E1017" />
+  <img src="https://img.shields.io/badge/Audio-PipeWire%20%2F%20CoreAudio-FF6B6B?style=for-the-badge&logo=speaker&logoColor=white&labelColor=0E1017" />
   <img src="https://img.shields.io/badge/License-GPL--3.0-00E676?style=for-the-badge&labelColor=0E1017" />
 </p>
 
 <p align="center">
-  <a href="https://github.com/rezariski/ixsland/releases/latest"><code>[ 📦 DOWNLOAD v1.0.0 ]</code></a> &nbsp;•&nbsp;
-  <a href="#-quick-start"><code>[ ⚡ QUICK START ]</code></a> &nbsp;•&nbsp;
+  <a href="#-1-linux-edition"><code>[ 🐧 LINUX GUIDE ]</code></a> &nbsp;•&nbsp;
+  <a href="#-2-windows-edition-windows-10--11-64-bit"><code>[ 🪟 WINDOWS GUIDE ]</code></a> &nbsp;•&nbsp;
+  <a href="#-interactive-demo-showcase-linux--windows"><code>[ 🧪 DEMO SHOWCASE ]</code></a> &nbsp;•&nbsp;
   <a href="#-feature-walkthrough"><code>[ ✨ FEATURES ]</code></a> &nbsp;•&nbsp;
   <a href="#-configuration"><code>[ ⚙️ CONFIG ]</code></a> &nbsp;•&nbsp;
-  <a href="#-interactive-demo"><code>[ 🧪 DEMO ]</code></a> &nbsp;•&nbsp;
   <a href="#-treat-me-a-coffee"><code>[ ☕ DONATE ]</code></a>
 </p>
 
@@ -35,11 +35,19 @@
 
 ---
 
-## ⚡ Quick Start
+## 📦 Dua Pilihan Platform: Linux & Windows (Linux/Windows)
 
-Installing `ixsland` takes less than 30 seconds. By default, it targets and centers right at the top of your **primary main monitor**.
+`ixsland` hadir secara native untuk dua ekosistem sistem operasi utama dengan arsitektur yang dirancang khusus:
+1. **Linux (Wayland / X11)**: Integrasi murni PipeWire `wpctl`, D-Bus MPRIS, KDE Plasma 6 KWin / Wayland layer.
+2. **Windows (Windows 10 & Windows 11 64-bit)**: Integrasi Windows CoreAudio API, WinRT GSMTC Media Control, Low-Level Hardware Hooks, dan Standalone Installer `Setup.exe`.
 
-### 1. Grab Dependencies
+---
+
+## 🐧 1. Linux Edition
+
+Pemasangan pada Linux membutuhkan waktu kurang dari 30 detik. Widget otomatis diletakkan tepat di bagian tengah atas monitor utama Anda.
+
+### Dependensi Sistem
 
 ```bash
 # Arch Linux / CachyOS / Manjaro
@@ -52,7 +60,7 @@ sudo apt update && sudo apt install python3 python3-pyqt6 pipewire wireplumber
 sudo dnf install python3 python3-pyqt6 pipewire wireplumber
 ```
 
-### 2. Clone & Install
+### Pasang & Jalankan
 
 ```bash
 git clone https://github.com/rezariski/ixsland.git
@@ -61,30 +69,63 @@ chmod +x install.sh
 ./install.sh
 ```
 
-That's literally it! The installer copies files to `~/.local/share/ixsland/`, creates a systemd user unit, and boots up the island immediately.
+Installer akan memasang berkas ke `~/.local/share/ixsland/`, mendaftarkan unit systemd user, dan langsung menyalakan Dynamic Island.
 
-### Managing the Service
+### Manajemen Layanan (Linux)
 
 ```bash
-# Check running status
-systemctl --user status ixsland.service
-
-# Restart
-systemctl --user restart ixsland.service
-
-# View live logs
-journalctl --user -u ixsland -f
-
-# Uninstall cleanly anytime
-./uninstall.sh
+systemctl --user status ixsland.service   # Cek status
+systemctl --user restart ixsland.service  # Restart
+journalctl --user -u ixsland -f           # Live log
+./uninstall.sh                            # Hapus instalasi
 ```
 
 ---
 
+## 🪟 2. Windows Edition (Windows 10 & 11 64-bit)
+
+Mendukung penuh arsitektur **Windows 10 (64-bit, 1903+)** dan **Windows 11 (64-bit)**.
+
 <div align="center">
-  <h2>✨ Live Demo in Action</h2>
-  <img src="./assets/demo_preview.gif" width="70%" alt="ixsland Live Demo GIF" />
+  <img src="./assets/windows10_demo.png" width="88%" alt="ixsland Dynamic Island on Windows 10" />
+  <p><em>Tangkapan layar ixsland aktif di desktop Windows 10 Pro 64-bit dengan pemutar musik tersinkronisasi.</em></p>
 </div>
+
+### Opsi A: Standalone Setup Installer (Paling Praktis, Tanpa Perlu Python)
+1. Buka folder [`windows/`](./windows/) atau unduh berkas **`Setup.exe`** (38 MB).
+2. Jalankan `Setup.exe` dan ikuti wizard grafis yang disediakan:
+   - Pilih direktori instalasi (default: `C:\ixsland`).
+   - Opsi membuat shortcut desktop & autostart saat Windows boot.
+3. Klik **Pasang Sekarang**. `ixsland` langsung aktif di monitor Anda tanpa memerlukan dependensi luar.
+
+### Opsi B: Menjalankan dari Kode Sumber (Developer)
+Pastikan Anda menggunakan Python 3.10+ (64-bit):
+```cmd
+cd windows
+pip install PyQt6 pycaw comtypes winsdk
+python ixsland_win.py
+```
+
+---
+
+## 🧪 Interactive Demo Showcase (Linux & Windows)
+
+Ingin melihat simulasi seluruh modul animasi, HUD, dan notifikasi beraksi secara berurutan? Gunakan showcase runner bawaan:
+
+### Pada Linux:
+```bash
+python3 ~/.local/share/ixsland/run-demo.py
+```
+
+### Pada Windows 10 / Windows 11:
+- **Cara Instan (Tanpa Python)**: Klik ganda file **`windows/run-demo.bat`** atau jalankan via PowerShell:
+  ```powershell
+  powershell -ExecutionPolicy Bypass -File .\windows\run-demo.ps1
+  ```
+- **Via Python**:
+  ```cmd
+  python windows/run_demo.py
+  ```
 
 ---
 
@@ -95,56 +136,63 @@ journalctl --user -u ixsland -f
   <img src="./assets/01_mascot.png" width="85%" alt="OLED Mascot Feature" />
 </div>
 
-- **Mathematical Gaze Tracking**: The vector mascot eyes dynamically follow your mouse cursor anywhere on the screen in real time with authentic 3D parallax glints.
-- **Natural Blink & Blush Joy**: Features natural micro-blinks every 3.8s and blushes a joyous hot-pink with a happy curved smile whenever you hover your cursor near the island.
-- **Smart Idle Sleep Engine**: Leave your desk? After 22 seconds of zero mouse movement, the mascot gently shuts its eyes with animated floating `zZ` indicators to save focus.
+- **Mathematical Gaze Tracking**: Pupil mata robot mengikuti koordinat kursor mouse Anda secara real-time dengan pantulan 3D parallax.
+- **Natural Blink & Blush Joy**: Berkedip alami setiap 3.8s dan tersenyum malu-senang (`^  ^`) dengan rona pipi pink saat kursor didekatkan.
+- **Smart Idle Sleep Engine**: Jika kursor tidak bergerak selama 22 detik, maskot tertidur pulas dengan animasi `zZ`.
 
 ---
 
-### 02. 🎵 Real-Time MPRIS Media Hub & Live Seekbar
+### 02. 🎵 Real-Time Media Hub & Live Seekbar
 <div align="center">
   <img src="./assets/02_media_hub.png" width="85%" alt="Interactive Media Hub Feature" />
 </div>
 
-- **Two-Way MPRIS Sync**: Reads album art, track title, artist name, and live play/pause state from Spotify, Brave, Chrome, Firefox, or any Linux MPRIS player.
-- **Click-to-Seek Scrubbing**: Real-time progress bar ticking second-by-second. Click anywhere on the duration timeline to jump instantly to that timestamp.
-- **120 BPM Dancing Equalizer**: Fluid frequency spectrum bars bouncing synchronously to active audio playback.
-- **Seamless Morphing**: Expands smoothly from a compact 180px pill into a full 380px music card using fluid `OutBack` easing.
+- **Sinkronisasi Dua Arah**: Membaca cover album, judul lagu, musisi, dan status putar dari Spotify, Chrome, Edge, Firefox via MPRIS (Linux) atau GSMTC (Windows).
+- **Click-to-Seek Scrubbing**: Progress bar durasi berjalan detik demi detik. Klik di posisi mana saja untuk lompat ke detik yang diinginkan.
+- **Equalizer Spektrum 120 BPM**: Batang frekuensi equalizer menari dinamis mengikuti ritme audio.
 
 ---
 
-### 03. 🧲 Smart Auto-Collapse (Zero Click Hassle)
-- **Automatic Mouse Exit Snapping**: No need to fiddle with tiny close buttons. Once you finish picking your track or scrubbing, just move your cursor outside the island area and it smoothly folds back into compact view.
-- **120ms Debounce Shield**: Moving cursor across the screen fast won't cause annoying accidental flickering.
-- **Permanent KWin Anchor**: Built using a fixed Wayland toplevel canvas with transparent input masks — meaning zero window manager repositioning lag or vertical jitter.
+### 03. 🧲 Smart Auto-Collapse & Top Notch Docking
+- **Penciutan Otomatis**: Saat mouse menjauh dari area island, Dynamic Island secara halus melipat kembali ke ukuran semula.
+- **Top Notch Mode**: Opsi mengecilkan tampilan menjadi notch tipis di pucuk layar monitor untuk area kerja yang lebih bersih.
+- **120ms Debounce Shield**: Pergerakan kursor yang melintas cepat tidak akan memicu kedipan yang tidak disengaja.
 
 ---
 
-### 04. 🔊 Fluid PipeWire Volume OSD & 150% Boost Warning
+### 04. 🔊 Fluid Volume OSD & 150% Overboost Warning
 <div align="center">
-  <img src="./assets/03_volume_osd.png" width="85%" alt="PipeWire Volume OSD Feature" />
+  <img src="./assets/03_volume_osd.png" width="85%" alt="Volume OSD Feature" />
 </div>
 
-- **Silky Interpolation**: Volume changes glide across the screen with a 160ms `OutCubic` animation curve.
-- **Hardware Event Polling**: Detects volume keys, headset buttons, and mouse wheel input instantaneously via PipeWire's `wpctl`.
-- **Over-Boost Fire Indicator**: When pushing audio past 100% (up to 150% boost), the sliding bar shifts dynamically from neon cyan into an amber blaze with a `🔥` badge alert.
+- **Animasi Sangat Halus**: Perubahan level volume meluncur dengan kurva easing `OutCubic`.
+- **Indikator Api Overboost**: Saat volume melebihi 100% (hingga batas boost 150%), aksen bar berubah menjadi jingga membara dengan ikon api `🔥`.
 
 ---
 
-### 05. 🕌 Offline Astronomical Prayer Time Engine & Smart Alerts
+### 05. 🔠 Shift Lock & Caps Lock Persistent HUD
+- **Indikator Aktif Menetap**: Saat Caps Lock / Shift Lock aktif, label kuning `CAPS LOCK ON` tetap menyala konsisten selama mengetik tanpa flicker atau kolaps prematur.
+- **Transisi Halus Saat Nonaktif**: Saat dimatikan, indikator bertransisi elastis ke warna abu-abu `CAPS LOCK OFF` selama 1.5 detik lalu melipat otomatis kembali ke jam/media.
+- **Deteksi Hardware Instan**: Membaca status register keyboard langsung pada event key release (`WM_KEYUP`).
+
+---
+
+### 06. 🕌 Offline Astronomical Prayer Time Engine & Smart Alerts
 <div align="center">
   <img src="./assets/04_prayer_alert.png" width="85%" alt="Prayer Times and Alerts Feature" />
 </div>
 
-- **100% Offline Solar Math**: Calculates Subuh, Dzuhur, Ashar, Maghrib, and Isya astronomical schedules locally using solar declination equations — zero external API dependency or latency.
-- **Auto-Pause Music Player**: Automatically pauses music playback as soon as prayer call starts so you never miss worship peace.
-- **Desktop System Alerts**: Beautiful pill banner for incoming chat messages (WhatsApp, Discord, Telegram) and system alerts.
+- **Matematika Astronomi 100% Offline**: Menghitung jadwal sholat (Subuh, Dzuhur, Ashar, Maghrib, Isya) secara lokal berdasarkan deklinasi matahari tanpa ketergantungan API pihak ketiga.
+- **Auto-Pause Music Player**: Otomatis menghentikan pemutaran musik saat adzan berkumandang.
+- **Desktop Chat Alerts**: Spanduk notifikasi elegan untuk pesan chat masuk (WhatsApp, Telegram, Discord).
 
 ---
 
 ## ⚙️ Configuration
 
-Your configuration lives at `~/.local/share/ixsland/config.json`. Tweak coordinates, screen targets, or prayer location easily:
+Berkas konfigurasi tersimpan pada:
+- **Linux**: `~/.local/share/ixsland/config.json`
+- **Windows**: `C:\ixsland\config.json` (atau di folder aplikasi)
 
 ```json
 {
@@ -154,38 +202,19 @@ Your configuration lives at `~/.local/share/ixsland/config.json`. Tweak coordina
   "longitude": 106.8456,
   "timezone": 7.0,
   "city": "Jakarta (WIB)",
-  "pause_music_on_adzan": true
+  "pause_music_on_adzan": true,
+  "enable_mascot": true
 }
 ```
 
-| Setting | Type | Description |
+| Opsi | Tipe | Penjelasan |
 |---|---|---|
-| `target_screen` | `string` | `"primary"` (default main monitor), or specify connector name (`"eDP-1"`, `"HDMI-A-1"`). |
-| `top_margin` | `integer` | Distance in pixels from the top edge of your screen (default: `16`). |
-| `latitude` / `longitude` | `float` | Coordinates for the offline astronomical prayer engine. |
-| `timezone` | `float` | UTC offset (e.g. `7.0` for WIB, `8.0` for WITA). |
-| `pause_music_on_adzan` | `boolean` | Set `true` to auto-pause Spotify/media when Adzan begins. |
-
----
-
-## 🧪 Interactive Demo Showcase
-
-Want to test every single animation state back-to-back? Run the built-in showcase suite:
-
-```bash
-python3 ~/.local/share/ixsland/run-demo.py
-```
-
-This triggers every feature (Idle clock, Mascot smile, Subuh s/d Isya alerts, Spotify seek, Volume OSD 85% & 135%, WhatsApp chat banner) with live transitions and auto-collapses.
-
----
-
-## 🛠️ Architecture & Under the Hood
-
-- **Wayland Native**: Runs as an unmanaged overlay toplevel on KDE Plasma 6 KWin.
-- **Zero XWayland Overhead**: Uses pure Qt6 Wayland platform integration.
-- **D-Bus IPC Control**: Exposes `org.ixsland.Island` interface on session bus for seamless scripting with `qdbus6`.
-- **Pure Vector Rendering**: Every pill, curve, eye reflection, and equalizing bar is drawn in realtime with anti-aliased `QPainter`.
+| `target_screen` | `string` | `"primary"` (monitor utama), atau nama konektor (`"HDMI-1"`, `"eDP-1"`). |
+| `top_margin` | `integer` | Jarak dalam pixel dari tepi atas layar monitor (default: `16`). |
+| `latitude` / `longitude` | `float` | Titik koordinat bumi untuk perhitungan hisab waktu sholat. |
+| `timezone` | `float` | Selisih waktu UTC (misal `7.0` untuk WIB, `8.0` untuk WITA). |
+| `pause_music_on_adzan` | `boolean` | `true` untuk menjeda musik otomatis saat masuk waktu sholat. |
+| `enable_mascot` | `boolean` | `true` untuk mengaktifkan maskot robot OLED interaktif. |
 
 ---
 
@@ -193,7 +222,7 @@ This triggers every feature (Idle clock, Mascot smile, Subuh s/d Isya alerts, Sp
 
 ## ☕ Treat Me a Coffee!
 
-If you love having this slick Dynamic Island on your Linux setup and want to support continued development, feel free to drop a tip! Every coffee counts! 🚀
+Jika Anda menyukai proyek Dynamic Island `ixsland` ini di Linux maupun Windows dan ingin mendukung pengembangannya, donasi secangkir kopi sangat berarti! 🚀
 
 <br/>
 
@@ -208,6 +237,6 @@ If you love having this slick Dynamic Island on your Linux setup and want to sup
 
 <br/>
 
-<sub>Crafted with passion by **Reza Rizki** • Made for the Linux community • Licensed under GPL-3.0</sub>
+<sub>Crafted with passion by **Reza Rizki** • Built for Linux & Windows (Linux/Windows) • Licensed under GPL-3.0</sub>
 
 </div>
