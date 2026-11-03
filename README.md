@@ -12,6 +12,20 @@
 <br/>
 
 <p align="center">
+  <a href="https://github.com/rezariski/ixsland/releases/download/v1.0.0/ixsland-linux-v1.0.0.zip">
+    <img src="https://img.shields.io/badge/Direct%20Download-Linux%20ZIP%20(v1.0.0)-00E5FF?style=for-the-badge&logo=linux&logoColor=white&labelColor=0E1017" alt="Direct Download Linux ZIP" />
+  </a>
+  &nbsp;
+  <a href="https://github.com/rezariski/ixsland/releases/download/v1.0.0/Setup.exe">
+    <img src="https://img.shields.io/badge/Direct%20Download-Windows%20Setup.exe%20(38MB)-0078D4?style=for-the-badge&logo=windows&logoColor=white&labelColor=0E1017" alt="Direct Download Windows Setup.exe" />
+  </a>
+  &nbsp;
+  <a href="https://github.com/rezariski/ixsland/releases/download/v1.0.0/ixsland-windows-v1.0.0.zip">
+    <img src="https://img.shields.io/badge/Direct%20Download-Windows%20ZIP%20(Portable)-22C55E?style=for-the-badge&logo=windows&logoColor=white&labelColor=0E1017" alt="Direct Download Windows ZIP" />
+  </a>
+</p>
+
+<p align="center">
   <a href="https://github.com/rezariski/ixsland/releases/latest">
     <img src="https://img.shields.io/github/v/release/rezariski/ixsland?style=for-the-badge&color=FFD700&labelColor=0E1017&label=Release" alt="Latest Release" />
   </a>
@@ -23,15 +37,27 @@
 </p>
 
 <p align="center">
+  <a href="#-direct-downloads-tautan-unduh-langsung"><code>[ 📥 DIRECT DOWNLOAD ]</code></a> &nbsp;•&nbsp;
   <a href="#-1-linux-edition"><code>[ 🐧 LINUX GUIDE ]</code></a> &nbsp;•&nbsp;
   <a href="#-2-windows-edition-windows-10--11-64-bit"><code>[ 🪟 WINDOWS GUIDE ]</code></a> &nbsp;•&nbsp;
   <a href="#-interactive-demo-showcase-linux--windows"><code>[ 🧪 DEMO SHOWCASE ]</code></a> &nbsp;•&nbsp;
   <a href="#-feature-walkthrough"><code>[ ✨ FEATURES ]</code></a> &nbsp;•&nbsp;
-  <a href="#-configuration"><code>[ ⚙️ CONFIG ]</code></a> &nbsp;•&nbsp;
   <a href="#-treat-me-a-coffee"><code>[ ☕ DONATE ]</code></a>
 </p>
 
 </div>
+
+---
+
+## 📥 Direct Downloads (Tautan Unduh Langsung)
+
+Klik tautan di bawah ini untuk langsung mengunduh paket resmi tanpa perlu navigasi halaman:
+
+| Sistem Operasi | Berkas Unduhan | Ukuran | Jenis Paket | Link Download Langsung |
+|---|---|---|---|---|
+| 🐧 **Linux** | `ixsland-linux-v1.0.0.zip` | 2.8 MB | Full Portable (Wayland / X11) | [⬇️ **Direct Download (Linux .ZIP)**](https://github.com/rezariski/ixsland/releases/download/v1.0.0/ixsland-linux-v1.0.0.zip) |
+| 🪟 **Windows** | `Setup.exe` | 38 MB | Standalone 1-Click Installer (Win 10/11 64-bit) | [⬇️ **Direct Download (Setup.exe)**](https://github.com/rezariski/ixsland/releases/download/v1.0.0/Setup.exe) |
+| 🪟 **Windows** | `ixsland-windows-v1.0.0.zip` | 37 MB | Portable Zip Package (Win 10/11 64-bit) | [⬇️ **Direct Download (Windows .ZIP)**](https://github.com/rezariski/ixsland/releases/download/v1.0.0/ixsland-windows-v1.0.0.zip) |
 
 ---
 
